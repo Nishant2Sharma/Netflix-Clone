@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    background: #000;
+}
+
+body::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: url("../images/Netflix_Background.jpg");
+    background-position: center;
+}
+
+nav{
+    position: fixed;
+    z-index: 1;
+    padding: 25px 60px;
+}
+
+nav a img{
+    width: 160px;
+}
+
+.form-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 430px;
+    padding: 60px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.75);
+    transform: translate(-50%, -50%);
+}
+
+.form-wrapper h2{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.form-wrapper form{
+    margin: 25px 0 65px;
+}
+
+form .form-control{
+    position: relative;
+    height: 50px;
+    margin-bottom: 16px;
+}
+
+.form-control input{
+    height: 100%;
+    width: 100%;
+    background: #333;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+    padding: 0 20px;
+}
+
+.form-control input:is(:focus, :valid){
+    padding: 16px 20px 0;
+    background: #444;
+}
+
+.form-control label{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    color: #8c8c8c;
+    pointer-events: none;
+    font-size: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.1s ease;
+}
+
+.form-control input:is(:focus, :valid) ~ label{
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+
+form button{
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 4px;
+    background: #e50914;
+    margin: 25px 0 10px;
+    transition: 0.1s ease;
+}
+
+form button:hover{
+    background: #c40812;
+}
+
+form .form-help{
+    display: flex;
+    justify-content: space-between;   
+}
+
+form .remember-me{
+    display: flex;
+}
+
+form .remember-me input{
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+form .form-help :where(label, a){
+    font-size: 0.9rem;
+}
+
+.form-wrapper :where(label, p, small, a){
+    color: #b3b3b3;
+}
+
+.form-wrapper p a{
+    color: #fff;
+}
+
+.form-wrapper small{
+    display: block;
+    margin-top: 15px;
+}
+
+.form-wrapper small a{
+    color: #0071eb;
+}
+
+.form-wrapper a{
+    text-decoration: none;
+}
+
+.form-wrapper a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    background-color: #000;
+    padding-top: 50%;
+    padding-bottom: 5%;
+}
+
+.footer,
+.footer a{
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer-heading{
+    margin-bottom: 1.5rem;
+    padding-left: 160px;
+    padding-top: 60px;
+}
+
+.footer .footer-col{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+    padding-left: 160px;
+
+}
+
+.footer li{
+    line-height: 2.5;
+}
+
+.no-bullets{
+    list-style-type: none;
+    text-decoration: underline;
+
+}
+
+.footer_lang_dropdown{
+    background: transparent;
+    border: none;
+    color: white;
+    margin-left: 5px;
+    padding: 0.1rem;
+    width: 100px;
+    height: 25px;
+    font-size: 14px;
+}
+
+.lang_dropdown {
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 110px;
+    padding: 5px;
+}
+
+.footer-language{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-left: 160px;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.fa-globe{
+    color: white;
+    font-size: 15px;
+}
